@@ -1,0 +1,12 @@
+services:
+  nestjs:
+    image: node:24
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: nestjs
+    volumes:
+      - .:/app
+    ports:  
+      - "3000:3000"
+    command: sleep infinity
